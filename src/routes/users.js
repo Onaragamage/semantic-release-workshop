@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
   const index = users.findIndex((u) => u.id === id);
  
   if (index === -1) {
-    return res.status(404).json({ error: `User with id ${id} not found` });
+    return res.status(404).json({ error: `User with this id ${id} not found` });
   }
  
   const { name, email, role } = req.body;
